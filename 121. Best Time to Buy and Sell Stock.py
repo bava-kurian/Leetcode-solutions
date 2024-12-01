@@ -8,4 +8,4 @@ class Solution:
             profit = price - min_price
             max_prof = max(max_prof, profit)
         
-        return max_pro
+        return max_prof
