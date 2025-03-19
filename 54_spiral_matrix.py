@@ -3,8 +3,9 @@ class Solution:
         r=[]
         t=[]
         while(matrix):
-            if matrix and matrix[0]:
-                r+=(matrix.pop(0)) #first row
+    
+            r+=(matrix.pop(0)) #first row
+
             if matrix and matrix[0]:
                 for row in matrix:#last elemt of rest of the row
                     r.append(row.pop())
