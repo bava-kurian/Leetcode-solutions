@@ -7,3 +7,11 @@ for e.g. [2,3[4,1,2]] = 2+3+ (4+1+2)^2
 
 another example - [1,2,[7,[3,4],2]] = 1 + 2 +( 7+(3+4)^3+2)^2'''
 
+def power_sum(array,power=1):
+    sum=0
+    for i in range(len(array)):
+        if type(array[i])== list:
+            sum+=power_sum(array[i],power+1)
+        else:
+            sum+=array[i]
+    return sum**power
