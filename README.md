@@ -1,6 +1,4 @@
-Here’s a template for your README file:
 
----
 
 # LeetCode Problems
 
@@ -51,6 +49,3 @@ If you have any questions or suggestions, feel free to reach out to me:
 
 - Email:bavakurian135@gmail.com
 
----
-
-Feel free to modify the template to suit your needs. Happy coding!
