@@ -31,3 +31,33 @@ class Solution:
             return memo[index,remain]
         return helper(0,W)
 
+#top-down dynamic programming solution to knapsack problem
+
+class Solution:
+    def knapsack(self, W, val, wt):
+        n = len(val)
+        memo = [[-1] * (W + 1) for _ in range(n + 1)]  # DP table
+
+        def helper(index, remain):
+            # Base cases
+            if index == n or remain == 0:
+                return 0
+
+            # Return memoized result
+            if memo[index][remain] != -1:
+                return memo[index][remain]
+
+            # Don't take current item
+            exclude = helper(index + 1, remain)
+
+            # Take current item if it fits
+            include = 0
+            if wt[index] <= remain:
+                include = val[index] + helper(index + 1, remain - wt[index])
+
+            # Save the result
+            memo[index][remain] = max(include, exclude)
+            return memo[index][remain]
+
+        return helper(0, W)
+
