@@ -1,3 +1,6 @@
+from cmath import inf
+
+
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         intervals.sort(key=lambda x:x[1])
